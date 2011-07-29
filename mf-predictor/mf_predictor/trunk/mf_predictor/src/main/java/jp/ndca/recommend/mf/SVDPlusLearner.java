@@ -32,15 +32,15 @@ public class SVDPlusLearner extends SVDLearner {
 	 * constractors
 	 */
 	public SVDPlusLearner(SVDConf conf) {
-		super(conf);
-		double lambda2 = conf.getLambda2();
-		if( lambda2 <= 0 )
-			throw new IllegalArgumentException("lambda2 need to be non-negative ");
-		this.lambda2 = lambda2;
+		this(null, conf);
 	}
 	public SVDPlusLearner( RatingDataset dataset, SVDConf conf ){
 		super( conf );
-		setRatingDataset(dataset);
+		double lambda2 = conf.getLambda2();
+		if( lambda2 <= 0 )
+			throw new IllegalArgumentException("lambda2 need to be non-negative ");
+		if( dataset != null )
+			setRatingDataset(dataset);
 	}
 
 	
