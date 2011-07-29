@@ -39,6 +39,7 @@ public class SVDPlusLearner extends SVDLearner {
 		double lambda2 = conf.getLambda2();
 		if( lambda2 <= 0 )
 			throw new IllegalArgumentException("lambda2 need to be non-negative ");
+		this.lambda2 = lambda2;
 		if( dataset != null )
 			setRatingDataset(dataset);
 	}
