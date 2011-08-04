@@ -258,8 +258,8 @@ public class SparseDotVector implements Vector{
 
 	@Override
 	public SparseDotVector clone() throws CloneNotSupportedException{
-		Node[] newNodes = new Node[nodes.length];
-		for( int i = 0 ; i < newNodes.length ; i++ )
+		Node[] newNodes = new Node[size];
+		for( int i = 0 ; i < size ; i++ )
 			newNodes[i] = nodes[i].clone();
 		return new SparseDotVector( newNodes, size );
 	}
