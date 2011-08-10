@@ -11,6 +11,14 @@ public class PrimitiveArrayHandler {
 		return value;
 	}
 	       
+	public static void normalize( double[] a ){
+		double total = 0.0d;
+		for( int i = 0 ; i < a.length ; i++ )
+			total += a[i];
+		for( int i = 0 ; i < a.length ; i++ )
+			a[i] /= total;
+	}
+	
 	public static double square( double[] a ){
 		double value = 0.0d;
 		for( int i = 0 ; i < a.length ; i++ )
