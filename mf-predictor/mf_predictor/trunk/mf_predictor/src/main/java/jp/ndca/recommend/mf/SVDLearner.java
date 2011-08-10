@@ -2,6 +2,13 @@ package jp.ndca.recommend.mf;
 
 import java.util.Iterator;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
+import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
+import it.unimi.dsi.fastutil.ints.IntSet;
+
 import jp.ndca.recommend.Learner;
 import jp.ndca.recommend.common.data.DatasetHandler;
 import jp.ndca.recommend.common.data.RatingData;
@@ -13,13 +20,6 @@ import jp.ndca.recommend.common.structure.vector.VectorFactory;
 import jp.ndca.recommend.common.util.PrimitiveArrayHandler;
 import jp.ndca.recommend.common.validation.DatasetValidator;
 import jp.ndca.recommend.common.validation.RatingDataValidations;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import it.unimi.dsi.fastutil.ints.Int2DoubleMap;
-import it.unimi.dsi.fastutil.ints.Int2DoubleOpenHashMap;
-import it.unimi.dsi.fastutil.ints.IntSet;
 
 public class SVDLearner implements Learner{
 
